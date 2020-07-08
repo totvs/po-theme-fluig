@@ -1,0 +1,18 @@
+{
+  "name": "@totvs/po-theme-fluig",
+  "version": "1.0.0",
+  "author": "Rubens dos Santos Filho",
+  "description": "Po Custom Theme - fluig",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/totvs/po-theme-fluig"
+  },
+  "scripts": {
+    "build": "po-theme build --fonts --name=fluig",
+    "postbuild": "cp README.md ./dist/"
+  },
+  "devDependencies": {
+    "@po-ui/style": "^2.9.0"
+  }
+}
