@@ -1,5 +1,5 @@
 /**
- * @theme: po-ui
+ * @theme: fluig theme
  **/
 
 /**
@@ -20,6 +20,7 @@
  * Button Group................variáveis do Button Group.
  * Calendar....................variáveis do Calendar.
  * Chart.......................variáveis do Chart.
+ * Checkbox....................variáveis do Checkbox.
  * Checkbox Group..............variáveis do Checkbox Group.
  * Combo.......................variáveis do Combo.
  * Container...................variáveis do Container.
@@ -41,7 +42,10 @@
  * Menu Filter.................variáveis do Menu Filter.
  * Menu Panel..................variáveis do Menu Panel.
  * Modal.......................variáveis do Modal.
- * Modal Password Recovery.....variáveis do Modal Password Recovery.Style Guide heading
+ * Modal Password Recovery.....variáveis do Modal Password Recovery.
+ * Multiselect.................variáveis do Multiselect.
+ * Navbar......................variáveis do Navbar.
+ * Navbar Action...............variáveis do Navbar Action.
  * Navbar Action Popup.........variáveis do Navbar Action Popup.
  * Navbar Item.................variáveis do Navbar Item.
  * Navbar Item Navigation......variáveis do Navbar Item Navigation.
@@ -52,7 +56,7 @@
  * Page Content................variáveis do Page Content.
  * Page Header................ variáveis do Page Header.
  * Page List...................variáveis do Page List.
- * Page Login..................variáveis do Page Login.Style Guide heading
+ * Page Login..................variáveis do Page Login.
  * Popover.....................variáveis do Popover.
  * Popup.......................variáveis do Popup.
  * Radio Group.................variáveis do Radio Group.
@@ -86,6 +90,7 @@
 :root {
   --color-wrapper-menu-panel-color-background: var(--color-white);
   --color-overlay-background-color-overlay: var(--color-secondary-dark-60-alpha-70);
+
   --color-hr-border-top: var(--color-neutral-light-90);
 }
 
@@ -231,28 +236,27 @@
    */
   --font-family-theme: OpenSans;
   --font-family-theme-bold: OpenSans-Bold;
-  --font-family-theme-extra-light: OpenSans-Condensed-Light;
+  --font-family-theme-extra-light: OpenSans-ExtraLight;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('./assets/fonts/OpenSans/OpenSans-Regular.ttf');
-  font-weight: normal;
+  font-family: "OpenSans";
+  src: url("./../fonts/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'OpenSans-Condensed-Light';
-  src: url('./assets/fonts/OpenSans/OpenSans-Light.ttf');
-  font-weight: 300;
+  font-family: "OpenSans-Bold";
+  src: url("./../fonts/OpenSans/OpenSans-Bold.ttf");
+  font-weight: 700;
   font-style: normal;
-  font-stretch: condensed;
 }
 
 @font-face {
-  font-family: 'OpenSans-Bold';
-  src: url('./assets/fonts/OpenSans/OpenSans-Bold.ttf');
-  font-weight: bold;
+  font-family: "OpenSans-ExtraLight";
+  src: url("./../fonts/OpenSans/OpenSans-Light.ttf");
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -266,12 +270,12 @@
 
   /**
    * Accordion Item
-  */
+   */
   --color-accordion-item-border-color: var(--color-neutral-light-90);
 
   /**
    * Accordion Item Header
-  */
+   */
   --color-accordion-header-button-background-color: var(--color-white);
   --color-accordion-header-color-primary: var(--color-primary);
   --color-accordion-header-color-hover: var(--color-secondary);
@@ -299,43 +303,43 @@
 
   /**
    * Button Default
-  */
+   */
   --color-button-background-color: var(--color-transparent);
-  --color-button-border: var(--color-secondary);
-  --color-button-color: var(--color-secondary);
+  --color-button-border: var(--color-primary);
+  --color-button-color: var(--color-primary);
 
   --color-button-background-color-hover: var(--color-transparent);
-  --color-button-border-hover: var(--color-secondary-dark-20);
-  --color-button-color-hover: var(--color-secondary-dark-20);
+  --color-button-border-hover: var(--color-primary-dark-20);
+  --color-button-color-hover: var(--color-primary-dark-20);
 
   --color-button-background-color-pressed: var(--color-transparent);
-  --color-button-border-pressed: var(--color-secondary-dark-40);
-  --color-button-color-pressed: var(--color-secondary-dark-40);
+  --color-button-border-pressed: var(--color-primary-dark-40);
+  --color-button-color-pressed: var(--color-primary-dark-40);
 
   --color-button-background-color-disabled: var(--color-transparent);
   --color-button-border-disabled: var(--color-neutral-light-60);
   --color-button-color-disabled: var(--color-neutral-light-60);
   /**
    * Button Primary
-  */
-  --color-button-background-color-primary: var(--color-tertiary);
-  --color-button-border-primary: var(--color-tertiary);
-  --color-button-color-primary: var(--color-neutral-dark-60);
+   */
+  --color-button-background-color-primary: var(--color-primary);
+  --color-button-border-primary: var(--color-primary);
+  --color-button-color-primary: var(--color-white);
 
-  --color-button-background-color-primary-hover: var(--color-tertiary-dark-40);
-  --color-button-border-primary-hover: var(--color-tertiary-dark-40);
-  --color-button-color-primary-hover: var(--color-neutral-dark-60);
+  --color-button-background-color-primary-hover: var(--color-primary-dark-20);
+  --color-button-border-primary-hover: var(--color-primary-dark-20);
+  --color-button-color-primary-hover: var(--color-neutral-light-90);
 
-  --color-button-background-color-primary-pressed: var(--color-tertiary-dark-60);
-  --color-button-border-primary-pressed: var(--color-tertiary-dark-60);
-  --color-button-color-primary-pressed: var(--color-neutral-dark-60);
+  --color-button-background-color-primary-pressed: var(--color-primary-dark-40);
+  --color-button-border-primary-pressed: var(--color-primary-dark-40);
+  --color-button-color-primary-pressed: var(--color-white);
 
   --color-button-background-color-primary-disabled: var(--color-neutral-light-60);
   --color-button-border-primary-disabled: var(--color-neutral-light-60);
   --color-button-color-primary-disabled: var(--color-white);
   /**
    * Button Danger
-  */
+   */
   --color-button-background-color-danger: var(--color-transparent);
   --color-button-border-danger: var(--color-danger);
   --color-button-color-danger: var(--color-danger);
@@ -353,7 +357,7 @@
   --color-button-color-danger-disabled: var(--color-neutral-light-60);
   /**
    * Button Link
-  */
+   */
   --color-button-background-color-link: var(--color-transparent);
   --color-button-color-link: var(--color-primary);
 
@@ -378,7 +382,7 @@
 
   /**
    * Breadcrumb
-  */
+   */
   --color-breadcrumb-background-color-container: var(--color-white);
   --color-breadcrumb-border-color-container: var(--color-neutral-light-90);
 
@@ -388,7 +392,7 @@
   --color-breadcrumb-color-star-active: var(--color-warning);
   /**
    * Breadcrumb Dropdown
-  */
+   */
   --color-breadcrumb-background-color-dropdown: var(--color-white);
   --color-breadcrumb-background-color-dropdown-item-hover: var(--color-primary-light-95);
 
@@ -549,7 +553,7 @@
     DIVIDER
   \*------------------------------------*/
 
-  --color-divider-label-color: var(--color-neutral-dark-60);
+  --color-divider-label-color: var(--color-primary);
   --color-divider-line-color: var(--color-neutral-light-90);
 
   /*------------------------------------*\
@@ -651,25 +655,25 @@
 
   --color-menu-color-menu-collapse-icon: var(--color-primary);
   --color-menu-color-menu-item-text: var(--color-primary);
-  --color-menu-color-menu-item-selected: var(--color-primary);
+  --color-menu-color-menu-item-selected: var(--color-danger-light-40);
   --color-menu-color-menu-sub-item-text: var(--color-danger-light-40);
   --color-menu-color-menu-sub-item-selected: var(--color-neutral-dark-60);
   --color-menu-color-menu-responsive: var(--color-primary);
 
   --color-menu-background-color-item-grouper-up-hover: var(--color-neutral-light-98);
-  --color-menu-background-color-item-hover: var(--color-black-alpha-15);
-  --color-menu-background-color-item-selected: var(--color-neutral-light-80);
+  --color-menu-background-color-item-hover: var(--color-primary-light-95);
+  --color-menu-background-color-item-selected: var(--color-transparent);
   --color-menu-background-color-menu: var(--color-white);
   --color-menu-background-color-menu-responsive-overlay: var(--color-secondary-dark-60-alpha-70);
   --color-menu-background-color-responsive: var(--color-neutral-light-98);
   --color-menu-background-color-sub-items: var(--color-neutral-light-98);
   --color-menu-background-color-sub-item-selected: var(--color-neutral-light-80);
 
-  --color-menu-border-color-menu-item-selected: var(--color-danger-light-40);
+  --color-menu-border-color-menu-item-selected: var(--color-transparent);
   --color-menu-border-left-item: var(--color-transparent);
-  --color-menu-border-top-item-grouper-up-hover: var(--color-neutral-light-80);
-  --color-menu-border-top-logo: var(--color-neutral-light-80);
-  --color-menu-border-top-collapse-button: var(--color-neutral-alpha-45);
+  --color-menu-border-top-item-grouper-up-hover: var(--color-transparent);
+  --color-menu-border-top-logo: var(--color-transparent);
+  --color-menu-border-top-collapse-button: var(--color-transparent);
 
   /*------------------------------------*\
    MENU FILTER
@@ -785,7 +789,7 @@
    PAGE
   \*------------------------------------*/
 
-  --color-page-background-color-page: var(--color-white);
+  --color-page-background-color-page: var(--color-neutral-light-98);
 
   /*------------------------------------*\
     PAGE BACKGROUND
@@ -1126,13 +1130,13 @@
   \*------------------------------------*/
 
   --color-toolbar-background-color-badge: var(--color-danger);
-  --color-toolbar-background-color-toolbar: var(--color-white);
+  --color-toolbar-background-color-toolbar: var(--color-page-background-color-page);
 
   --color-toolbar-border-color-separator: var(--color-neutral-light-90);
 
   --color-toolbar-color-badge-text: var(--color-white);
   --color-toolbar-color-default: var(--color-primary);
-  --color-toolbar-color-title: var(--color-secondary);
+  --color-toolbar-color-title: var(--color-primary);
 
   /*------------------------------------*\
    TOOLTIP
